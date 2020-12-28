@@ -1,27 +1,9 @@
-#install modules
-#Install-Module -Name posh-git
-#Install-Module -Name oh-my-posh
-#Install-Module -Name posh-alias
+$root = Split-Path -Path $MyInvocation.MyCommand.Definition -Parent
 
-#tools
-#pip install thefuck
+#. "$root/import-modules.ps1"
+#. "$root/install-tools.ps1"
+#. "$root/add-git-aliases.ps1"
 
-#git
-#git config --global alias.ci 'commit'
-#git config --global core.editor="C:\Users\andre.correa\AppData\Local\Programs\Microsoft VS Code\Code.exe" --wait
-#git config --global core.longpaths=true
-#git config --global user.name=Andre Torres Correa
-#git config --global user.email=andre.correa@lambda3.com.br
-#git config --global alias.st=status
-#git config --global alias.co=checkout
-#git config --global alias.cim=commit -m
-#git config --global alias.ci=commit
-#git config --global alias.aa=add .
-#git config --global alias.pur=pull -r
-
-Import-Module posh-git
-Import-Module oh-my-posh
-Import-Module posh-alias
 Set-Prompt
 Set-Theme Operator
 
