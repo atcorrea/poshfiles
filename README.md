@@ -1,2 +1,2 @@
 # poshfiles
-my powershell profile
+My custom powershell profile.
