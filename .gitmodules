@@ -7,3 +7,6 @@
 [submodule "Modules/oh-my-posh"]
 	path = Modules/oh-my-posh
 	url = https://github.com/JanDeDobbeleer/oh-my-posh
+[submodule "Modules/Terminal-Icons"]
+	path = Modules/terminal-Icons
+	url = https://github.com/devblackops/Terminal-Icons
