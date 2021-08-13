@@ -18,7 +18,9 @@ Invoke-Expression (&starship init powershell)
 # ===== PSREADLINE
 Set-PSReadLineOption -PredictionSource History
 Set-PSReadLineOption -PredictionViewStyle ListView
-Set-PSReadLineOption -EditMode Windows
+Set-PSReadLineOption -EditMode vi
+Set-PSReadLineKeyHandler -Chord Ctrl+j -Function NextHistory
+Set-PSReadLineKeyHandler -Chord Ctrl+k -Function PreviousHistory
 
 # ========= aliases
 Add-Alias admin 'Start-Process wt  -Verb runAs'
