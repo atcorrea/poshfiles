@@ -22,6 +22,15 @@ Set-PSReadLineOption -EditMode vi
 Set-PSReadLineKeyHandler -Chord Ctrl+j -Function NextHistory
 Set-PSReadLineKeyHandler -Chord Ctrl+k -Function PreviousHistory
 
+function OnViModeChange {
+  if ($args[0] -eq 'Command') {
+    Write-Host -NoNewLine "`b:"
+  } else {
+    Write-Host -NoNewLine "`b_"
+  }
+}
+Set-PSReadLineOption -ViModeIndicator Script -ViModeChangeHandler $Function:OnViModeChange
+
 # ========= aliases
 Add-Alias admin 'Start-Process wt  -Verb runAs'
 Add-Alias hosts 'Start-Process notepad C:\Windows\System32\drivers\etc\hosts -Verb RunAs'
